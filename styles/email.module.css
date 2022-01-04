@@ -1,0 +1,7 @@
+.email {
+    writing-mode: vertical-rl;
+}
+
+.email:hover {
+    text-decoration: none !important;
+}
