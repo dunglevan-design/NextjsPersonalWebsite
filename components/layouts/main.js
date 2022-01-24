@@ -32,7 +32,7 @@ const Main = ({ children, router }) => {
         position="fixed"
         bottom={0}
         left={20}
-        display={{ sm: "none", lg: "flex" }}
+        display={["none","none", "none" , "flex" ]}
         flexDirection={"column"}
         alignItems={"center"}
       >
@@ -46,7 +46,7 @@ const Main = ({ children, router }) => {
         position={"fixed"}
         bottom={0}
         right={20}
-        display={{ sm: "none", lg: "flex" }}
+        display={["none","none", "none", "flex"]}
         alignItems={"center"}
         flexDirection={"column"}
       >
