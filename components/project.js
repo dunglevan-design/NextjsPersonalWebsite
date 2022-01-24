@@ -31,6 +31,7 @@ export const Meta = ({ children }) => (
 );
 
 const Styledvideo = styled.video`
+  width: 275px;
 `;
 
 export const WorkVideo = ({ src, alt }) => (

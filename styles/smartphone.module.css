@@ -5,6 +5,7 @@
   border-radius: 36px;
   width: fit-content;
   position: relative;
+  margin-bottom: 16px;
 }
 .smartphone:before {
   content: "";

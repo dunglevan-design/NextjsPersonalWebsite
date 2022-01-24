@@ -1,6 +1,6 @@
-import { Container, Badge, Link, List, ListItem } from "@chakra-ui/react";
+import { Container, Badge, Link, List, ListItem, Box } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Title, Meta, WorkImage } from "../../components/project";
+import { Title, Meta, WorkImage, WorkVideo } from "../../components/project";
 import P from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
 
@@ -22,7 +22,7 @@ const Work = () => (
             https://covid-trackerfrontend.pages.dev/{" "}
             <ExternalLinkIcon mx="2px" />
           </Link>
-        </ListItem> 
+        </ListItem>
         <ListItem>
           <Meta>type</Meta>
           <span>Full Stack web app</span>
@@ -36,7 +36,31 @@ const Work = () => (
           <span>Python, Django, Scipy</span>
         </ListItem>
       </List>
-      <WorkImage src="/images/works/easycovid_eyecatch.png" alt="easyCovid" />
+      <WorkImage src="/images/works/easycovid_2.png" alt="easyCovid2" />
+      <Box
+        display="flex"
+        flexDirection={["column", "row"]}
+        alignItems={"center"}
+        justifyContent="space-evenly"
+      >
+        <WorkVideo
+          src="https://firebasestorage.googleapis.com/v0/b/personalportfolio-af8fa.appspot.com/o/covidtracker_1.mp4?alt=media&token=4e91a101-cd43-4759-937d-a753352b80bd"
+          alt="easy-covid-demo"
+        />
+        <WorkVideo
+          src="https://firebasestorage.googleapis.com/v0/b/personalportfolio-af8fa.appspot.com/o/covidtracker_2.mp4?alt=media&token=9856a8dd-29c1-4030-8d6b-1db18e1d6088"
+          alt="easy-covid-demo"
+        />
+
+        {/* <WorkVideo
+          src="https://firebasestorage.googleapis.com/v0/b/bettertinder-4ff52.appspot.com/o/worsetinder.mp4?alt=media&token=685e53f2-cd03-477b-962e-e3686b45439e"
+          alt="easyTinderdemo"
+        />
+        <WorkVideo
+          src="https://firebasestorage.googleapis.com/v0/b/bettertinder-4ff52.appspot.com/o/worsetinder.mp4?alt=media&token=685e53f2-cd03-477b-962e-e3686b45439e"
+          alt="easyTinderdemo"
+        /> */}
+      </Box>
     </Container>
   </Layout>
 );
