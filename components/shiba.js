@@ -20,9 +20,9 @@ const Shiba = () => {
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0));
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      25,
+      20 * Math.sin(0.2 * Math.PI),
       10,
-      0,
+      20 * Math.cos(0.2 * Math.PI)
     )
   );
 
@@ -38,6 +38,7 @@ const Shiba = () => {
       renderer.setSize(scW, scH);
     }
   }, [renderer]);
+
   useEffect(() => {
     const container = refContainer.current;
 
@@ -56,12 +57,22 @@ const Shiba = () => {
     container.appendChild(renderer.domElement);
 
     setRenderer(setRenderer);
+    const scale = scH * 0.005 + 2;
 
-    const camera = new THREE.PerspectiveCamera(
-      25,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
+    // const camera = new THREE.PerspectiveCamera(
+    //   25,
+    //   window.innerWidth / window.innerHeight,
+    //   0.1,
+    //   1000
+    // );
+
+    const camera = new THREE.OrthographicCamera(
+      -scale,
+      scale,
+      scale,
+      -scale,
+      0.01,
+      50000
     );
     camera.position.copy(initialCameraPosition);
     camera.lookAt(target);

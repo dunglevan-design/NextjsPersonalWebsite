@@ -4,11 +4,12 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import Thumbeasycovid from "../public/images/works/easycovid_eyecatch.png";
 import Thumbeasytinder from "../public/images/works/easytinder_eyecatch.png";
+import Thumbeasychat from "../public/images/works/easychat_eyecatch.png";
 
 const Projects = () => {
   return (
     <Layout>
-      <Container>
+      <Container maxW={"container.md"}>
         <Heading as="h3" fontSize={20} mb={4}>
           Projects
         </Heading>
@@ -39,6 +40,19 @@ const Projects = () => {
               A mix between the swipe and match functionality of tinder and the
               video sharing ideas of Tiktok with fully functioning chat features
               including push notifications and sharing images and videos
+            </WorkGridItem>
+          </Section>
+
+          <Section>
+            <WorkGridItem
+              id="easychat"
+              title={"easyChat"}
+              thumbnail={Thumbeasychat}
+            >
+              {" "}
+              A minimal chat application on the web from
+              scratch with bad words filtering, push notifications and group
+              video calling with webRTC and the mesh network
             </WorkGridItem>
           </Section>
         </SimpleGrid>

@@ -16,25 +16,25 @@ function ContactForm() {
     <Container mt={12}>
       <FormControl>
         <FormLabel htmlFor="email">Email address</FormLabel>
-        <Input id="email" type="email" />
+        <Input variant={"filled"} id="email" type="email" />
         <FormHelperText>We'll never share your email.</FormHelperText>
       </FormControl>
 
       <Flex justifyContent={"space-between"}>
         <FormControl width={"45%"}>
           <FormLabel htmlFor="name">Name</FormLabel>
-          <Input id="name" type="text" />
+          <Input variant={"filled"} id="name" type="text" />
         </FormControl>
 
         <FormControl width={"45%"}>
           <FormLabel htmlFor="subject">Subject</FormLabel>
-          <Input id="subject" type="text" />
+          <Input variant={"filled"} id="subject" type="text" />
         </FormControl>
       </Flex>
 
       <FormControl>
         <FormLabel htmlFor="message">Message</FormLabel>
-        <Textarea id="message" type="textarea" name="message" />
+        <Textarea variant = "filled" id="message" type="textarea" name="message" />
       </FormControl>
 
       <Box align="center">

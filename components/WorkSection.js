@@ -1,4 +1,4 @@
-import { ChakraProvider, Flex, Heading, Text } from "@chakra-ui/react";
+import { Badge, ChakraProvider, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "@emotion/styled";
@@ -9,7 +9,8 @@ import { TriangleUpIcon } from "@chakra-ui/icons";
 
 const data = [
   {
-    title: "web developer",
+    title: "Web Developer intern",
+    year: "May - September 2021",
     bulletpoints: [
       "Worked with a team of 5, including UI/UX designers to build and maintain an e-commerce platform selling online financial courses, primarily using HTML, CSS, Less, Javascript, PHP",
       "Implemented Oauth2 in Nodejs to allow authentication with Singpass{API}",
@@ -17,7 +18,8 @@ const data = [
     ],
   },
   {
-    title: "Software Enginner",
+    title: "Software Enginner Co-op",
+    year: "September 2020 - May 2021",
     bulletpoints: [
       "Collaborated with a small team to build consolidation tool to pull together animals' movement data reports, providing a consistent, clean set of data for easier analysist work for the client, the front-end is built with Reactjs and the backend with Java",
       "Implemented Spring Web MVC framework to build secured HTTPs endpoints and interact with databases and storage",
@@ -27,6 +29,7 @@ const data = [
   },
   {
     title: "Beverage server/preparer",
+    year: "2019",
     bulletpoints: [
       "Preparing, serving beverages to customers, authorising their transaction, listening to customers’ problems and answering their questions about menu items",
       "Breaking plates, spilling drinks and getting scolded by the store manager",
@@ -104,6 +107,7 @@ const WorkSection = () => {
           <Heading as="h3" fontSize={20}>
             {data[0].title}
           </Heading>
+          <Badge>{data[0].year}</Badge>
           <BulletPoint text={data[0].bulletpoints[0]} />
           <BulletPoint text={data[0].bulletpoints[1]} />
           <BulletPoint text={data[0].bulletpoints[2]} />
@@ -120,6 +124,8 @@ const WorkSection = () => {
           <Heading as="h3" fontSize={20}>
             {data[1].title}
           </Heading>
+          <Badge>{data[1].year}</Badge>
+
           <BulletPoint text={data[1].bulletpoints[0]} />
           <BulletPoint text={data[1].bulletpoints[1]} />
           <BulletPoint text={data[1].bulletpoints[2]} />
@@ -137,6 +143,8 @@ const WorkSection = () => {
           <Heading as="h3" fontSize={20}>
             {data[2].title}
           </Heading>
+          <Badge>{data[2].year}</Badge>
+
           <BulletPoint text={data[2].bulletpoints[0]} />
           <BulletPoint text={data[2].bulletpoints[1]} />
         </MotionDiv>
@@ -145,7 +153,7 @@ const WorkSection = () => {
   );
 };
 
-const BulletPoint = ({ text }) => (
+export const BulletPoint = ({ text }) => (
   <Text as="p" width={"100%"} display={"flex"} mb={3}>
     <TriangleUpIcon
       color={"#4fd1c5"}
