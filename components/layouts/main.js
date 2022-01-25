@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box, Container, Text } from "@chakra-ui/react";
+import { Box, Container, Text, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "../navbar";
 import Shiba from "../shiba";
 import NoSsr from "../no-ssr";
@@ -14,6 +14,8 @@ import styles from "../../styles/email.module.css";
 import { motion } from "framer-motion";
 
 const Main = ({ children, router }) => {
+  const color = useColorModeValue("#2c7a7b", "#88ccca");
+
   return (
     <Box as="main" pb={8}>
       <Head>
@@ -56,11 +58,12 @@ const Main = ({ children, router }) => {
             mb={8}
             textDecoration={"none"}
             href="mailto:dunglevan2001@gmail.com"
+            color = {color}
           >
             dunglevan2001@gmail.com
           </Link>
         </motion.div>
-        <Box height={150} width={0.5} background={"#81e6d9"} zIndex={10}></Box>
+        <Box height={150} width={0.5} background={color} zIndex={10}></Box>
       </Box>
     </Box>
   );

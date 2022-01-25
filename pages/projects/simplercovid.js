@@ -8,7 +8,7 @@ const Work = () => (
   <Layout>
     <Container maxW="container.md">
       <Title>
-        easyCovid <Badge>Web app</Badge>
+        SimplerCovid <Badge>Web app</Badge>
       </Title>
       <P>
         A fully responsive webapp to track most recent covid-19 data updates,
@@ -52,14 +52,7 @@ const Work = () => (
           alt="easy-covid-demo"
         />
 
-        {/* <WorkVideo
-          src="https://firebasestorage.googleapis.com/v0/b/bettertinder-4ff52.appspot.com/o/worsetinder.mp4?alt=media&token=685e53f2-cd03-477b-962e-e3686b45439e"
-          alt="easyTinderdemo"
-        />
-        <WorkVideo
-          src="https://firebasestorage.googleapis.com/v0/b/bettertinder-4ff52.appspot.com/o/worsetinder.mp4?alt=media&token=685e53f2-cd03-477b-962e-e3686b45439e"
-          alt="easyTinderdemo"
-        /> */}
+       
       </Box>
     </Container>
   </Layout>

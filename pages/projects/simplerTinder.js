@@ -8,7 +8,7 @@ const Work = () => (
   <Layout>
     <Container maxW="container.md">
       <Title>
-        easyTinder <Badge>Mobile App</Badge>
+        SimplerTinder <Badge>Mobile App</Badge>
       </Title>
       <P>
         A mix between the swipe and match functionality of tinder and the video
@@ -34,11 +34,11 @@ const Work = () => (
       <WorkImage src="/images/works/easytinder_eyecatch.png" alt="Inkdrop" />
       <Box display ="flex" flexDirection={"row"} alignItems={"center"} justifyContent="space-evenly">
         <WorkVideo
-          src="https://firebasestorage.googleapis.com/v0/b/bettertinder-4ff52.appspot.com/o/worsetinder.mp4?alt=media&token=685e53f2-cd03-477b-962e-e3686b45439e"
+          src="https://firebasestorage.googleapis.com/v0/b/personalportfolio-af8fa.appspot.com/o/tinder_1.mp4?alt=media&token=fbce61c7-d82f-4c56-91c7-c40123687001"
           alt="easyTinderdemo"
         />
         <WorkVideo
-          src="https://firebasestorage.googleapis.com/v0/b/bettertinder-4ff52.appspot.com/o/worsetinder.mp4?alt=media&token=685e53f2-cd03-477b-962e-e3686b45439e"
+          src="https://firebasestorage.googleapis.com/v0/b/personalportfolio-af8fa.appspot.com/o/tinder_2.mp4?alt=media&token=e1c4ee31-944b-469e-9308-4e925230ab99"
           alt="easyTinderdemo"
         />
       </Box>

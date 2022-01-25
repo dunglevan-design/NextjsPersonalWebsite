@@ -30,7 +30,7 @@ const Projects = () => {
           {/* delays */}
           <Section>
             <WorkGridItem
-              id="easycovid"
+              id="simplercovid"
               title={"SimplerCovid"}
               thumbnail={Thumbeasycovid}
             >
@@ -43,7 +43,7 @@ const Projects = () => {
 
           <Section>
             <WorkGridItem
-              id="easyTinder"
+              id="simplerTinder"
               title={"SimplerTinder"}
               thumbnail={Thumbeasytinder}
             >
@@ -56,7 +56,7 @@ const Projects = () => {
 
           <Section>
             <WorkGridItem
-              id="easychat"
+              id="simplerchat"
               title={"SimplerChat"}
               thumbnail={Thumbeasychat}
             >
@@ -68,13 +68,14 @@ const Projects = () => {
 
           <Section>
             <WorkGridItem
-              id="easychat"
+              id="simplerrenderer"
               title={"SimplerRenderer"}
               thumbnail={Thumbeasyrender}
             >
               {" "}
-              A minimal chat application on the web from scratch with bad words
-              filtering, push notifications and video calling
+              A simple 3D Render engine built from scratch using nothing but C++
+              with SDL2 and Maths. Input a object file and a material file,
+              renders the scence with added orbit controls and lighting options
             </WorkGridItem>
           </Section>
         </SimpleGrid>
@@ -104,7 +105,7 @@ const Projects = () => {
                 </Link>
               </Td>
             </Tr>
-            
+
             <Tr>
               <Td>SnakeJs</Td>
               <Td>Reactjs, Material UI</Td>
@@ -118,6 +119,17 @@ const Projects = () => {
 
             <Tr>
               <Td>Personal portfolio</Td>
+              <Td>Nextjs, ChakraUI, Threejs, Framer Motion</Td>
+              <Td>
+                {" "}
+                <Link href="https://github.com/dunglevan-design/NextjsPersonalWebsite">
+                  <ExternalLinkIcon mx="2px" />
+                </Link>
+              </Td>
+            </Tr>
+
+            <Tr>
+              <Td>Alolia </Td>
               <Td>Nextjs, ChakraUI, Threejs, Framer Motion</Td>
               <Td>
                 {" "}

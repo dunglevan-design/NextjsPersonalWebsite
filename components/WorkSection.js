@@ -21,7 +21,7 @@ const data = [
     title: "Software Enginner Co-op",
     year: "September 2020 - May 2021",
     bulletpoints: [
-      "Collaborated with a small team to build consolidation tool to pull together animals' movement data reports, providing a consistent, clean set of data for easier analysist work for the client, the front-end is built with Reactjs and the backend with Java",
+      "Collaborated with a small team to build consolidation tool to pull together animals' movement data reports, providing a consistent, clean set of data for easier analysist work for the client, the front-end is built with Reactjs and the backend with Java Spring Boot",
       "Implemented Spring Web MVC framework to build secured HTTPs endpoints and interact with databases and storage",
       "Integrated CircleCI for continuous integration and Docker for seemless deployment onto AmazonEC2",
       "Worked closely with the clients for frequent catchups and requirement updates",
