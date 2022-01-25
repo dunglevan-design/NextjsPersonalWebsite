@@ -1,4 +1,12 @@
-import { Badge, ChakraProvider, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  ChakraProvider,
+  Flex,
+  Heading,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "@emotion/styled";
@@ -41,6 +49,10 @@ const StyledDiv = chakra(
     backgroundColor: props.active ? "rgba(255, 255, 255, 0.08)" : "",
     color: props.active ? "#4fd1c5" : "",
     transition: "all 0.4s linear",
+    height: 60,
+    display: "flex",
+    alignItems: "center",
+    borderLeft: "2px solid",
   })),
   {
     baseStyle: {
@@ -53,7 +65,7 @@ const StyledDiv = chakra(
 
 const Container = chakra(
   styled.div((props) => ({
-    marginRight: "10%",
+    marginRight: 10,
     display: "flex",
     paddingTop: 20,
   })),
@@ -62,9 +74,22 @@ const Container = chakra(
 
 const MotionDiv = chakra(motion.div);
 
+const MotionBox = motion(Box);
+const variants = {
+  active0: {
+    y: 0,
+  },
+  active1: {
+    y: 60,
+  },
+  active2: {
+    y: 120,
+  },
+};
+
 const WorkSection = () => {
   const [active, setActive] = useState([true, false, false]);
-
+  const activeIndex = active[0] ? 0 : active[1] ? 1 : active[2] ? 2 : -1;
   const showActive = (index) => {
     setActive((previousActive) => {
       const newActive = previousActive.map((e, i) => i === index);
@@ -73,11 +98,17 @@ const WorkSection = () => {
   };
   return (
     <Flex flexDirection={"row"} width={"100%"}>
-      <Container flexDirection={"column"} flexGrow={1}>
+      <Container
+        flexDirection={"column"}
+        flexGrow={2}
+        flexBasis={200}
+        position={"relative"}
+      >
         <StyledDiv
           _hover={{ bg: "whiteAlpha.200" }}
           active={active[0] ? 1 : 0}
           onClick={() => showActive(0)}
+          borderLeftColor={useColorModeValue("#23355430", "#233554")}
         >
           <Text>CFTE</Text>
         </StyledDiv>
@@ -85,6 +116,7 @@ const WorkSection = () => {
           _hover={{ bg: "whiteAlpha.200" }}
           active={active[1] ? 1 : 0}
           onClick={() => showActive(1)}
+          borderLeftColor={useColorModeValue("#23355430", "#233554")}
         >
           <Text>Defra / APHA</Text>
         </StyledDiv>
@@ -92,9 +124,23 @@ const WorkSection = () => {
           _hover={{ bg: "whiteAlpha.200" }}
           active={active[2] ? 1 : 0}
           onClick={() => showActive(2)}
+          borderLeftColor={useColorModeValue("#23355430", "#233554")}
         >
           <Text>Chatime</Text>
         </StyledDiv>
+
+        <MotionBox
+          position={"absolute"}
+          height={"60px"}
+          bg="#4fd1c5"
+          width={"2px"}
+          animate={{ y: 60 * activeIndex }}
+          transition={{
+            delay: 0.1,
+            duration: 0.25,
+            ease: [0.645, 0.045, 0.355, 1],
+          }}
+        />
       </Container>
 
       {active[0] && (
@@ -102,6 +148,7 @@ const WorkSection = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={"all 0.4s ease-out"}
+          flexBasis={"100%"}
           flexGrow={3}
         >
           <Heading as="h3" fontSize={20}>
@@ -119,6 +166,7 @@ const WorkSection = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={"all 0.4s ease-out"}
+          flexBasis={"100%"}
           flexGrow={3}
         >
           <Heading as="h3" fontSize={20}>
@@ -139,6 +187,7 @@ const WorkSection = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={"all 0.4s ease-out"}
           flexGrow={3}
+          flexBasis={"100%"}
         >
           <Heading as="h3" fontSize={20}>
             {data[2].title}

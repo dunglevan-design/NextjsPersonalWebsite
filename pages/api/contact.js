@@ -11,15 +11,17 @@ export default async function handler(req, res) {
   const { name, subject, email, message } = req.body;
 
   const msg = {
-    to: "dungvanle2k@gmail.com",
-    from: "dunglevan2001@gmail.com",
+    to: "vandunglepex@gmail.com",
+    from: "vandunglepex@gmail.com",
     subject: subject,
     text: `From: ${name}, email: ${email}, ${message}`,
   };
 
   try {
-    await sgMail.send(msg);
+    const result = await sgMail.send(msg);
+    console.log("email sent succesfully", result);
     res.status(200).json({ status: "email sent successfull" });
+    
   } catch (error) {
     res.status(500).json({ status: "sendGrid problems" });
   }
