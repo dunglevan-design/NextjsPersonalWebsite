@@ -89,7 +89,7 @@ const Navbar = (props) => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 4.5 }}
           >
-            <LinkItem href="/projects" path={path}>
+            <LinkItem href="/projects" path={path} >
               Projects
             </LinkItem>
           </motion.div>

@@ -6,23 +6,26 @@ import { AnimatePresence } from "framer-motion";
 import { useLayoutEffect, useRef, useState } from "react";
 import SplashScreen from "../components/SplashScreen";
 import { useEffect } from "react";
+import styles from "../styles/scrollbar.module.css"
+import globalstyles from "../styles/global.css"
 
 const Website = ({ Component, pageProps, router }) => {
   const [loading, setLoading] = useState(true);
   const firstVisit = useRef(true);
 
   useEffect(() => {
-    const body = document.querySelector("body");
+    const body = document.querySelector("#main__wrapper");
     console.log(body.classList);
-    body.style.overflow = "hidden";
+    body.style.overflowX = "hidden";
+    body.style.overflowY = "hidden";
   }, []);
 
   useEffect(() => {
     setTimeout(() => {
       firstVisit.current = false;
       setLoading(false);
-      const body = document.querySelector("body");
-      body.style.overflow = "scroll";
+      const body = document.querySelector("#main__wrapper");
+      body.style.overflowY = "scroll";
     }, 4000);
   }, []);
   return (
