@@ -57,7 +57,7 @@ const Shiba = () => {
     container.appendChild(renderer.domElement);
 
     setRenderer(setRenderer);
-    const scale = scH * 0.005 + 2;
+    const scale = scH * 0.003 + 2;
 
     // const camera = new THREE.PerspectiveCamera(
     //   25,

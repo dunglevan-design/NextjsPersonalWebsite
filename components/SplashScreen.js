@@ -56,7 +56,7 @@ function SplashScreen() {
       </Box>
 
       <motion.svg
-        width="15%"
+        width="250"
         viewBox="0 0 570 561"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

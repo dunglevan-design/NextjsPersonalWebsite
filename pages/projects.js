@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Link, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Heading, Link, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import { WorkGridItem } from "../components/grid-item";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
@@ -6,6 +6,11 @@ import Thumbeasycovid from "../public/images/works/easycovid_eyecatch.svg";
 import Thumbeasytinder from "../public/images/works/easytinder_eyecatch.svg";
 import Thumbeasychat from "../public/images/works/easychat_eyecatch.svg";
 import Thumbeasyrender from "../public/images/works/easyrender_eyecatch.svg";
+
+import Thumbeasycoviddark from "../public/images/works/easycovid_eyecatchdark.svg";
+import Thumbeasytinderdark from "../public/images/works/easytinder_eyecatchdark.svg";
+import Thumbeasychatdark from "../public/images/works/easychat_eyecatchdark.svg";
+import Thumbeasyrenderdark from "../public/images/works/easyrender_eyecatchdark.svg";
 import {
   Table,
   Thead,
@@ -32,7 +37,7 @@ const Projects = () => {
             <WorkGridItem
               id="simplercovid"
               title={"SimplerCovid"}
-              thumbnail={Thumbeasycovid}
+              thumbnail={useColorModeValue(Thumbeasycoviddark, Thumbeasycovid) }
             >
               {" "}
               A fully responsive webapp to track most recent covid-19 data
@@ -45,7 +50,7 @@ const Projects = () => {
             <WorkGridItem
               id="simplerTinder"
               title={"SimplerTinder"}
-              thumbnail={Thumbeasytinder}
+              thumbnail={useColorModeValue(Thumbeasytinderdark, Thumbeasytinder)}
             >
               {" "}
               A clone mobile version of Tinder with swipe and match
@@ -58,7 +63,7 @@ const Projects = () => {
             <WorkGridItem
               id="simplerchat"
               title={"SimplerChat"}
-              thumbnail={Thumbeasychat}
+              thumbnail={useColorModeValue(Thumbeasychatdark, Thumbeasychat)}
             >
               {" "}
               A minimal chat application on the web from scratch with bad words
@@ -70,7 +75,7 @@ const Projects = () => {
             <WorkGridItem
               id="simplerrenderer"
               title={"SimplerRenderer"}
-              thumbnail={Thumbeasyrender}
+              thumbnail={useColorModeValue(Thumbeasyrenderdark, Thumbeasyrender)}
             >
               {" "}
               A simple 3D Render engine built from scratch using nothing but C++
@@ -129,11 +134,11 @@ const Projects = () => {
             </Tr>
 
             <Tr>
-              <Td>Alolia </Td>
-              <Td>Nextjs, ChakraUI, Threejs, Framer Motion</Td>
+              <Td>Football Club manangment app </Td>
+              <Td>C#, WindowsForm, Mysql</Td>
               <Td>
                 {" "}
-                <Link href="https://github.com/dunglevan-design/NextjsPersonalWebsite">
+                <Link href="https://www.youtube.com/watch?v=SQQy67yXk8g&t=72s">
                   <ExternalLinkIcon mx="2px" />
                 </Link>
               </Td>
