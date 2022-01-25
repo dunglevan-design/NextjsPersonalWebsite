@@ -11,8 +11,8 @@ export default async function handler(req, res) {
   const { name, subject, email, message } = req.body;
 
   const msg = {
-    to: "dunglevan2001@gmail.com",
-    from: "dungvanle2k@gmail.com",
+    to: "dungvanle2k@gmail.com",
+    from: "dunglevan2001@gmail.com",
     subject: subject,
     text: `From: ${name}, email: ${email}, ${message}`,
   };
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     res.status(500).json({ status: "sendGrid problems" });
   }
 
-  res.status(500).json({ status: "sendGrid problems" });
+  // res.status(500).json({ status: "sendGrid problems" });
   
   
 }

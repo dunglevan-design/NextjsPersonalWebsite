@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import ThemeToggleButon from "./theme-toggle-button";
 import NoSsr from "./no-ssr";
+import { motion } from "framer-motion";
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
@@ -34,6 +35,20 @@ const LinkItem = ({ href, path, children }) => {
     </NextLink>
   );
 };
+
+const containervariants = {
+  hidden: {
+    y: -20,
+    opacity: 0,
+  },
+
+  show: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+const AnimatedBox = motion(Box);
 
 const Navbar = (props) => {
   const { path } = props;
@@ -69,15 +84,35 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItem href="/projects" path={path}>
-            Projects
-          </LinkItem>
-          <LinkItem href="/contacts" path={path}>
-            Contacts
-          </LinkItem>
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 4.5 }}
+          >
+            <LinkItem href="/projects" path={path}>
+              Projects
+            </LinkItem>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 4.6 }}
+          >
+            <LinkItem href="/contacts" path={path}>
+              Contacts
+            </LinkItem>
+          </motion.div>
         </Stack>
 
-        <Box flex={1} justifyContent={"flex-end"} display={"flex"}>
+        <AnimatedBox
+          flex={1}
+          justifyContent={"flex-end"}
+          display={"flex"}
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 4.7 }}
+        >
           <ThemeToggleButon />
 
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
@@ -104,7 +139,7 @@ const Navbar = (props) => {
               </Menu>
             </NoSsr>
           </Box>
-        </Box>
+        </AnimatedBox>
       </Container>
     </Box>
   );

@@ -4,6 +4,6 @@ module.exports = {
     domains: ['images.pexels.com'],
   },
   env: {
-    SENDGRID_API_KEY: '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',
+    SENDGRID_API_KEY: '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',
   },
 }
