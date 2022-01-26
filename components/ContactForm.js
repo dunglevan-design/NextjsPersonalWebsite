@@ -20,6 +20,9 @@ function ContactForm() {
   const [message, setMessage] = useState("");
   const [SystemMessage, setSystemMessage] = useState("");
 
+  const [emailsent, setEmailsent] = useState(false);
+
+
   async function SubmitContact(e) {
     e.preventDefault();
 
@@ -52,6 +55,10 @@ function ContactForm() {
         "An error has occured 😢, please use the mailbox instead or contact me via LinkedIn"
       );
     }
+
+    setEmailsent(true);
+
+
   }
 
   return (
@@ -114,7 +121,7 @@ function ContactForm() {
 
         <Box align="center">
           <FormControl mt={6}>
-            <Button type="submit" colorScheme={"teal"}>
+            <Button type="submit" colorScheme={"teal"} disabled = {emailsent}>
               Say Hello !
             </Button>
           </FormControl>
