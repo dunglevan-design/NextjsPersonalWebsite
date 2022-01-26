@@ -97,7 +97,7 @@ export default function Page() {
           </Paragraph>
 
           <Box align="center" my={4}>
-            <NextLink href="/resume.pdf">
+            <NextLink href="/Resume.pdf">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My portfolio
               </Button>
