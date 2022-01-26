@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   //   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   console.log(process.env.SENDGRID_API_KEY);
 
-  sgMail.setApiKey("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");
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   console.log(req.body.name);
   console.log(req.method);
