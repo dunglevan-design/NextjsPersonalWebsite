@@ -26,7 +26,7 @@ const Website = ({ Component, pageProps, router }) => {
       setLoading(false);
       const body = document.querySelector("#main__wrapper");
       body.style.overflowY = "scroll";
-    }, 4000);
+    }, 3300);
   }, []);
   return (
     <ChakraProvider theme={theme}>

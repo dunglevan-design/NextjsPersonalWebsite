@@ -29,9 +29,9 @@ const Logo = () => {
           <AnimatedBox
             width={10}
             height={10}
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 4.1 }}
+            transition={{ delay: 3.3, duration: 1, type: "spring" }}
           >
             <Image
               src={footPrintImg}
@@ -47,7 +47,7 @@ const Logo = () => {
             ml={3}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 4.4 }}
+            transition={{ delay: 3.8 }}
           >
             Jun Le
           </AnimatedText>

@@ -87,7 +87,7 @@ const Navbar = (props) => {
           <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 4.5 }}
+            transition={{ delay: 4 }}
           >
             <LinkItem href="/projects" path={path} >
               Projects
@@ -97,7 +97,7 @@ const Navbar = (props) => {
           <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 4.6 }}
+            transition={{ delay: 4.1 }}
           >
             <LinkItem href="/contacts" path={path}>
               Contacts
@@ -111,7 +111,7 @@ const Navbar = (props) => {
           display={"flex"}
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 4.7 }}
+          transition={{ delay: 4.2 }}
         >
           <ThemeToggleButon />
 

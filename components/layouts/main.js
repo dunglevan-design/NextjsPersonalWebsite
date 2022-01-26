@@ -56,7 +56,7 @@ const Main = ({ children, router }) => {
           variants={variants}
           initial="hidden"
           animate="show"
-          transition={{ delay: 5 }}
+          transition={{ delay: 4.4 }}
         >
           {/* 3D dog */}
           <NoSsr>
@@ -78,7 +78,7 @@ const Main = ({ children, router }) => {
           variants={variants}
           initial="hidden"
           animate="show"
-          transition={{ delay: 5.6 }}
+          transition={{ delay: 4.6 }}
         >
           <SvgButtonGithub />
           <SvgButtonInsta />
@@ -103,7 +103,7 @@ const Main = ({ children, router }) => {
           variants={variants}
           initial="hidden"
           animate="show"
-          transition={{ delay: 5.6 }}
+          transition={{ delay: 4.6 }}
         >
           <motion.div whileHover={{ color: "#81e6d9", y: -5 }}>
             <Link

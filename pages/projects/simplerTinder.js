@@ -11,8 +11,9 @@ const Work = () => (
         SimplerTinder <Badge>Mobile App</Badge>
       </Title>
       <P>
-        A mix between the swipe and match functionality of tinder and the video
-        sharing ideas of Tiktok with fully functioning chat features
+        A clone mobile version of Tinder with swipe and match functionalities.
+        Sharing photos and videos and chatting in real time. Built with React
+        Native and react native firebase.
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -32,7 +33,12 @@ const Work = () => (
         </ListItem>
       </List>
       <WorkImage src="/images/works/easytinder_eyecatch.png" alt="Inkdrop" />
-      <Box display ="flex" flexDirection={"row"} alignItems={"center"} justifyContent="space-evenly">
+      <Box
+        display="flex"
+        flexDirection={"row"}
+        alignItems={"center"}
+        justifyContent="space-evenly"
+      >
         <WorkVideo
           src="https://firebasestorage.googleapis.com/v0/b/personalportfolio-af8fa.appspot.com/o/tinder_1.mp4?alt=media&token=fbce61c7-d82f-4c56-91c7-c40123687001"
           alt="easyTinderdemo"
