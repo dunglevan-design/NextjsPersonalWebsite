@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
   const msg = {
     to: "dunglevan2001@gmail.com",
-    from: "JunLeVan2001@gmail.com",
+    from: "dunglevan2001@gmail.com",
     subject: subject,
     text: `From: ${name}, email: ${email}, ${message}`,
   };
