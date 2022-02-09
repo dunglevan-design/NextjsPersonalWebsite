@@ -1,4 +1,11 @@
-import { Box, Container, Heading, Link, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  Link,
+  SimpleGrid,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { WorkGridItem } from "../components/grid-item";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
@@ -33,24 +40,15 @@ const Projects = () => {
 
         <SimpleGrid columns={[1, 1, 2]} gap={[6, 6, 15]}>
           {/* delays */}
-          <Section>
-            <WorkGridItem
-              id="simplercovid"
-              title={"SimplerCovid"}
-              thumbnail={useColorModeValue(Thumbeasycoviddark, Thumbeasycovid) }
-            >
-              {" "}
-              A fully responsive webapp to track most recent covid-19 data
-              updates, with tables, graphs and maps. Built with Reactjs, Django
-              backend to solve SIR equations in real time
-            </WorkGridItem>
-          </Section>
 
-          <Section>
+          <Section delay = {0.2}>
             <WorkGridItem
               id="simplerTinder"
               title={"SimplerTinder"}
-              thumbnail={useColorModeValue(Thumbeasytinderdark, Thumbeasytinder)}
+              thumbnail={useColorModeValue(
+                Thumbeasytinderdark,
+                Thumbeasytinder
+              )}
             >
               {" "}
               A clone mobile version of Tinder with swipe and match
@@ -59,7 +57,7 @@ const Projects = () => {
             </WorkGridItem>
           </Section>
 
-          <Section>
+          <Section delay = {0.4}>
             <WorkGridItem
               id="simplerchat"
               title={"SimplerChat"}
@@ -70,12 +68,28 @@ const Projects = () => {
               filtering, push notifications and video calling
             </WorkGridItem>
           </Section>
+          
+          <Section delay={0.6}>
+            <WorkGridItem
+              id="simplercovid"
+              title={"SimplerCovid"}
+              thumbnail={useColorModeValue(Thumbeasycoviddark, Thumbeasycovid)}
+            >
+              {" "}
+              A fully responsive webapp to track most recent covid-19 data
+              updates, with tables, graphs and maps. Built with Reactjs, Django
+              backend to solve SIR equations in real time
+            </WorkGridItem>
+          </Section>
 
-          <Section>
+          <Section delay={0.8}>
             <WorkGridItem
               id="simplerrenderer"
               title={"SimplerRenderer"}
-              thumbnail={useColorModeValue(Thumbeasyrenderdark, Thumbeasyrender)}
+              thumbnail={useColorModeValue(
+                Thumbeasyrenderdark,
+                Thumbeasyrender
+              )}
             >
               {" "}
               A simple 3D Render engine built from scratch using nothing but C++
