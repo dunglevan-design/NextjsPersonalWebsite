@@ -1,5 +1,4 @@
 import {
-  Box,
   Container,
   Heading,
   Link,
@@ -146,7 +145,18 @@ const Projects = () => {
                 </Link>
               </Td>
             </Tr>
-
+            
+            <Tr>
+              <Td>ChessLens</Td>
+              <Td>React Native, Reat Native Camera Vision, Django, OpenCV, Firebase</Td>
+              <Td>
+                {" "}
+                <Link href="https://github.com/dunglevan-design/ChessLens">
+                  <ExternalLinkIcon mx="2px" />
+                </Link>
+              </Td>
+            </Tr>
+ 
             <Tr>
               <Td>Football Club manangment app </Td>
               <Td>C#, WindowsForm, Mysql</Td>
