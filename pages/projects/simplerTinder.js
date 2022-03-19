@@ -8,7 +8,7 @@ const Work = () => (
   <Layout>
     <Container maxW="container.md">
       <Title>
-        SimplerTinder <Badge>Mobile App</Badge>
+        Tinder Clone <Badge>Mobile App</Badge>
       </Title>
       <P>
         A clone mobile version of Tinder with swipe and match functionalities.

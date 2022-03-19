@@ -43,7 +43,7 @@ const Projects = () => {
           <Section delay = {0.2}>
             <WorkGridItem
               id="simplerTinder"
-              title={"SimplerTinder"}
+              title={"Tinder Clone"}
               thumbnail={useColorModeValue(
                 Thumbeasytinderdark,
                 Thumbeasytinder
@@ -59,7 +59,7 @@ const Projects = () => {
           <Section delay = {0.4}>
             <WorkGridItem
               id="simplerchat"
-              title={"SimplerChat"}
+              title={"Simple Chat"}
               thumbnail={useColorModeValue(Thumbeasychatdark, Thumbeasychat)}
             >
               {" "}
@@ -71,7 +71,7 @@ const Projects = () => {
           <Section delay={0.6}>
             <WorkGridItem
               id="simplercovid"
-              title={"SimplerCovid"}
+              title={"Covid-19 Tracker"}
               thumbnail={useColorModeValue(Thumbeasycoviddark, Thumbeasycovid)}
             >
               {" "}
@@ -84,7 +84,7 @@ const Projects = () => {
           <Section delay={0.8}>
             <WorkGridItem
               id="simplerrenderer"
-              title={"SimplerRenderer"}
+              title={"MTL renderer"}
               thumbnail={useColorModeValue(
                 Thumbeasyrenderdark,
                 Thumbeasyrender
@@ -148,7 +148,7 @@ const Projects = () => {
             
             <Tr>
               <Td>ChessLens</Td>
-              <Td>React Native, Reat Native Camera Vision, Django, OpenCV, Firebase</Td>
+              <Td>React Native, Reat Native Camera Vision, Websocket, OpenCV, JavaCV</Td>
               <Td>
                 {" "}
                 <Link href="https://github.com/dunglevan-design/ChessLens">

@@ -8,7 +8,7 @@ const Work = () => (
   <Layout>
     <Container maxW="container.md">
       <Title>
-        SimplerCovid <Badge>Web app</Badge>
+        Covid-19 Tracker <Badge>Web app</Badge>
       </Title>
       <P>
         A fully responsive webapp to track most recent covid-19 data updates,

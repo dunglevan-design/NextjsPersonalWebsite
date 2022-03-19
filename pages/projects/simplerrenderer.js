@@ -8,7 +8,7 @@ const Work = () => (
   <Layout>
     <Container maxW="container.md">
       <Title>
-        SimplerRenderer <Badge>Command Line App</Badge>
+        MTL Renderer <Badge>Command Line App</Badge>
       </Title>
       <P>
         A simple 3D Render engine built from scratch using nothing but C++ with

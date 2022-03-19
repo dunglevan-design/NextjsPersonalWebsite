@@ -10,7 +10,7 @@ function easychat() {
     <Layout>
       <Container maxW={"container.md"}>
         <Title>
-          SimplerChat <Badge>Web app</Badge>
+          Simpler Chat <Badge>Web app</Badge>
         </Title>
         <P>
           A fully responsive chat application on the web from scratch with
