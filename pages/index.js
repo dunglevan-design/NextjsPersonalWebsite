@@ -5,13 +5,8 @@ import {
   Button,
   Container,
   Flex,
-  FormControl,
-  FormHelperText,
-  FormLabel,
   Heading,
   Image,
-  Input,
-  Link,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Section from "../components/section";
@@ -33,7 +28,7 @@ export default function Page() {
           mb={6}
           align="center"
         >
-          Hello, I'm a full stack developer from Bristol
+          Hello, I'm a full stack developer from London
         </Box>
 
         <Box display={{ md: "flex" }}>
@@ -41,7 +36,7 @@ export default function Page() {
             <Heading as="h2" variant="page-title">
               Jun Le
             </Heading>
-            <p>Javascript/Typescript, Reactjs, React Native, Firebase</p>
+            <p>C#.Net Core, C++, Javascript/Typescript, Reactjs, React Native, Koitlin Android</p>
           </Box>
 
           <Box
@@ -69,10 +64,9 @@ export default function Page() {
             About me
           </Heading>
           <Paragraph>
-            Hello! I am Jun. I am a final year student at University of Bristol.
-            I am a coder and I love building stuffs. I have a knack for all
-            things from planning and designing programs all the way to testing
-            and deploying. Here are a few technologies I have been working with
+            Hello! I am Jun. I am a full-time software developer. I am passionate about building and learning. 
+            I have a knack for all things from planning and building, to testing
+            and deploying programs. Here are a few technologies I have been working with
             recently:
           </Paragraph>
 
@@ -83,21 +77,20 @@ export default function Page() {
             py={6}
             px={3}
           >
-            <BulletPointTech text="Javascript(ES6+)" />
+            <BulletPointTech text="C# .Net Core" />
+            <BulletPointTech text="C++" />
             <BulletPointTech text="Typescript" />
-            <BulletPointTech text="React" />
-            <BulletPointTech text="Nodejs" />
-            <BulletPointTech text="Nextjs" />
-            <BulletPointTech text="Firebase" />
+            <BulletPointTech text="Reactjs" />
+            <BulletPointTech text="Koitlin Android" />
+            <BulletPointTech text="React Native" />
           </Flex>
 
           <Paragraph>
-            When not online, I ♥ hanging out with friends, playing the guitar
-            and playing games
+            When not online, I ♥ hanging out with friends and playing the guitar
           </Paragraph>
 
           <Box align="center" my={4}>
-            <NextLink href="/Resume.pdf">
+            <NextLink href="/projects">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My portfolio
               </Button>
@@ -106,15 +99,12 @@ export default function Page() {
         </Section>
 
         <Section delay={0.5}>
-          <Heading as = "h3" variant = "section-title">
-            Education
-          </Heading>
           <EducationSection />
         </Section>
 
         <Section delay={0.8}>
           <Heading as="h3" variant="section-title">
-            Work
+            Where I've worked
           </Heading>
           <WorkSection></WorkSection>
         </Section>
@@ -126,8 +116,8 @@ export default function Page() {
           </Heading>
 
           <Paragraph>
-            I’m currently looking for new opportunities. My inbox is always
-            open, whether you have a position available, want to collaborate on
+            I'm not currently looking for a position. However, my inbox is always
+            open, whether you want to collaborate on
             a project or just want to say hi !
           </Paragraph>
 

@@ -17,10 +17,18 @@ import { TriangleUpIcon } from "@chakra-ui/icons";
 
 const data = [
   {
+    title: "Software Developer",
+    year: "August 2022",
+    bulletpoints : [
+      "Work closely with BAs and other developers to maintain and implement new software features for Acturis solutions",
+      "Develop and maintain internal softwares and frameworks",
+    ],
+  },
+  {
     title: "Web Developer intern",
     year: "May - September 2021",
     bulletpoints: [
-      "Worked with a team of 5, including UI/UX designers to build and maintain an e-commerce platform selling online financial courses, primarily using HTML, CSS, Less, Javascript, PHP",
+      "Worked in a team of developers, including UI/UX designers to build and maintain an e-commerce platform selling online financial courses, primarily using PHP, HTML, CSS, Javascript",
       "Implemented Oauth2 in Nodejs to allow authentication with Singpass{API}",
       "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
     ],
@@ -88,8 +96,8 @@ const variants = {
 };
 
 const WorkSection = () => {
-  const [active, setActive] = useState([true, false, false]);
-  const activeIndex = active[0] ? 0 : active[1] ? 1 : active[2] ? 2 : -1;
+  const [active, setActive] = useState([true, false, false, false]);
+  const activeIndex = active[0] ? 0 : active[1] ? 1 : active[2] ? 2 : active[3] ? 3 : -1;
   const showActive = (index) => {
     setActive((previousActive) => {
       const newActive = previousActive.map((e, i) => i === index);
@@ -110,7 +118,7 @@ const WorkSection = () => {
           onClick={() => showActive(0)}
           borderLeftColor={useColorModeValue("#23355430", "#233554")}
         >
-          <Text>CFTE</Text>
+          <Text>Acturis</Text>
         </StyledDiv>
         <StyledDiv
           _hover={{ bg: "whiteAlpha.200" }}
@@ -118,12 +126,20 @@ const WorkSection = () => {
           onClick={() => showActive(1)}
           borderLeftColor={useColorModeValue("#23355430", "#233554")}
         >
-          <Text>Defra / APHA</Text>
+          <Text>CFTE</Text>
         </StyledDiv>
         <StyledDiv
           _hover={{ bg: "whiteAlpha.200" }}
           active={active[2] ? 1 : 0}
           onClick={() => showActive(2)}
+          borderLeftColor={useColorModeValue("#23355430", "#233554")}
+        >
+          <Text>Defra / APHA</Text>
+        </StyledDiv>
+        <StyledDiv
+          _hover={{ bg: "whiteAlpha.200" }}
+          active={active[3] ? 1 : 0}
+          onClick={() => showActive(3)}
           borderLeftColor={useColorModeValue("#23355430", "#233554")}
         >
           <Text>Chatime</Text>
@@ -157,10 +173,8 @@ const WorkSection = () => {
           <Badge>{data[0].year}</Badge>
           <BulletPoint text={data[0].bulletpoints[0]} />
           <BulletPoint text={data[0].bulletpoints[1]} />
-          <BulletPoint text={data[0].bulletpoints[2]} />
         </MotionDiv>
       )}
-
       {active[1] && (
         <MotionDiv
           initial={{ y: 10, opacity: 0 }}
@@ -173,11 +187,9 @@ const WorkSection = () => {
             {data[1].title}
           </Heading>
           <Badge>{data[1].year}</Badge>
-
           <BulletPoint text={data[1].bulletpoints[0]} />
           <BulletPoint text={data[1].bulletpoints[1]} />
           <BulletPoint text={data[1].bulletpoints[2]} />
-          <BulletPoint text={data[1].bulletpoints[3]} />
         </MotionDiv>
       )}
 
@@ -186,8 +198,8 @@ const WorkSection = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={"all 0.4s ease-out"}
-          flexGrow={3}
           flexBasis={"100%"}
+          flexGrow={3}
         >
           <Heading as="h3" fontSize={20}>
             {data[2].title}
@@ -196,6 +208,26 @@ const WorkSection = () => {
 
           <BulletPoint text={data[2].bulletpoints[0]} />
           <BulletPoint text={data[2].bulletpoints[1]} />
+          <BulletPoint text={data[2].bulletpoints[2]} />
+          <BulletPoint text={data[2].bulletpoints[3]} />
+        </MotionDiv>
+      )}
+
+      {active[3] && (
+        <MotionDiv
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={"all 0.4s ease-out"}
+          flexGrow={3}
+          flexBasis={"100%"}
+        >
+          <Heading as="h3" fontSize={20}>
+            {data[3].title}
+          </Heading>
+          <Badge>{data[3].year}</Badge>
+
+          <BulletPoint text={data[3].bulletpoints[0]} />
+          <BulletPoint text={data[3].bulletpoints[1]} />
         </MotionDiv>
       )}
     </Flex>

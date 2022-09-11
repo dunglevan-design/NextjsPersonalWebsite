@@ -35,17 +35,16 @@ export const EducationSection = () => {
     <Timeline theme={customTheme}>
       <Events>
         <TextEvent
-          date="09-2016 - 2017"
-          text="**High School for Gifted Students**<br/><br/>Major in Computer Science"
-        ></TextEvent>
-        <TextEvent
           date="09/2017 - 2019"
           text="**Brockenhust College** <br/><br/>Computer Science, Maths, Further Maths, Economics"
         />
-
         <TextEvent
-          date="09/2019 - now"
+          date="09/2019 - 06/2022"
           text="**University of Bristol**<br/><br/>Bachelors of Science, Maths and Computer Science"
+        />
+        <TextEvent 
+          date="08/2022 - now"
+          text="**Acturis**<br/><br/>Software Developer"
         />
       </Events>
     </Timeline>
