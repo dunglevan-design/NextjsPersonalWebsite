@@ -44,7 +44,7 @@ function ContactForm() {
       console.log(response.status);
       if (response.status == 200) {
         setSystemMessage(
-          "I have received the message and will get  back to you ASAP 👌"
+          "I have received the message and will get back to you ASAP 👌"
         );
       } else
         setSystemMessage(
